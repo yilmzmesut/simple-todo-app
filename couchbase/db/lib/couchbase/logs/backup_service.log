@@ -1,0 +1,216 @@
+2022-09-07T14:32:09.339Z INFO (Main) Running node version backup-7.1.1-3175-cf90ef8 with options: -http-port=8097 -grpc-port=9124 -https-port=18097 -cert-path=/opt/couchbase/var/lib/couchbase/config/certs/chain.pem -key-path=/opt/couchbase/var/lib/couchbase/config/certs/pkey.pem -ca-path=/opt/couchbase/var/lib/couchbase/config/certs/ca.pem -ipv4=required -ipv6=optional -cbm=/opt/couchbase/bin/cbbackupmgr -node-uuid=1678dfae96c38e07dff43c49b9f6967b -public-address=127.0.0.1 -admin-port=8091 -log-file=none -log-level=debug -integrated-mode -integrated-mode-host=http://127.0.0.1:8091 -secure-integrated-mode-host=https://127.0.0.1:18091 -integrated-mode-user=@backup -tmp-dir=/opt/couchbase/var/lib/couchbase/tmp -cbauth-host=127.0.0.1:8091
+2022-09-07T14:32:09.339Z INFO (Main) Initialized logger {"log level": "debug"}
+2022-09-07T14:32:09.340Z INFO (Main) Getting credentials
+2022-09-07T14:32:09.340Z DEBUG (Main) File limit info {"curr": 1048576, "max": 1048576, "err": null}
+2022-09-07T14:32:09.340Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.342Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.343Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.344Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.344Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.346Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.351Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.352Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.352Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":0,"uniform_vbuckets":true}
+2022-09-07T14:32:09.352Z INFO (Node) Confirmed cluster uuid {"clusterUUID": "f7a8495a9eb390597cfca9b1032b2584"}
+2022-09-07T14:32:09.365Z INFO (CBAUDIT) audit: created new audit service
+2022-09-07T14:32:09.365Z INFO (Audit) Audit service initialised
+2022-09-07T14:32:09.374Z INFO (Node) Starting GRPC manager
+2022-09-07T14:32:09.375Z INFO (GRPC Manager) Starting GRPC Server {"address": "0.0.0.0:9124"}
+2022-09-07T14:32:09.375Z INFO (GRPC Manager) Starting GRPC Server {"address": "[::]:9124"}
+2022-09-07T14:32:09.376Z INFO (Node) Starting leader manager
+2022-09-07T14:32:09.376Z INFO (Leader Manager) Starting leader manager
+2022-09-07T14:32:09.376Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:18097", "https": true}
+2022-09-07T14:32:09.376Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:18097", "https": true}
+2022-09-07T14:32:09.376Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:8097", "https": false}
+2022-09-07T14:32:09.376Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:8097", "https": false}
+2022-09-07T14:32:09.378Z INFO (Storage) Starting MetaKV observer
+2022-09-07T14:32:09.378Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.378Z INFO (Node) TLS config refreshed
+2022-09-07T14:32:09.378Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.379Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.379Z DEBUG (Leader Manager) Received store event {"eventType": 6}
+2022-09-07T14:32:09.380Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.380Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.380Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.380Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.382Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.382Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":0,"uniform_vbuckets":true}
+2022-09-07T14:32:09.390Z WARN (Worker) Stopping task runner with 0 task on queue
+2022-09-07T14:32:09.390Z WARN (Worker) Stopped
+2022-09-07T14:32:09.390Z INFO (HTTP Manager) Shutting down http server {"https": true}
+2022-09-07T14:32:09.390Z INFO (HTTP Manager) Shutting down http server {"https": false}
+2022-09-07T14:32:09.390Z DEBUG (HTTP Manager) HTTP servers shutdown {"time_taken": 0.000184143}
+2022-09-07T14:32:09.390Z INFO (GRPC Manager) Starting GRPC Server {"address": "0.0.0.0:9124"}
+2022-09-07T14:32:09.391Z INFO (GRPC Manager) Starting GRPC Server {"address": "[::]:9124"}
+2022-09-07T14:32:09.392Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:8097", "https": false}
+2022-09-07T14:32:09.392Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:8097", "https": false}
+2022-09-07T14:32:09.392Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:18097", "https": true}
+2022-09-07T14:32:09.392Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.392Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:18097", "https": true}
+2022-09-07T14:32:09.393Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-07T14:32:09.393Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.393Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-07T14:32:09.393Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.394Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-07T14:32:09.394Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.395Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-07T14:32:09.395Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":0,"uniform_vbuckets":true}
+2022-09-07T14:32:14.019Z INFO (Service Manager) Prepare topology change {"change": {"id":"4307eb163446517dcbcbb482310263e6","currentTopologyRev":null,"type":"topology-change-rebalance","keepNodes":[{"nodeInfo":{"nodeId":"1678dfae96c38e07dff43c49b9f6967b","priority":1,"opaque":{"grpc_port":9124,"host":"127.0.0.1","http_port":8097}},"recoveryType":"recovery-full"}],"ejectNodes":[]}}
+2022-09-07T14:32:14.020Z INFO (Service Manager) Start topology change {"change": {"id":"4307eb163446517dcbcbb482310263e6","currentTopologyRev":null,"type":"topology-change-rebalance","keepNodes":[{"nodeInfo":{"nodeId":"1678dfae96c38e07dff43c49b9f6967b","priority":1,"opaque":{"grpc_port":9124,"host":"127.0.0.1","http_port":8097}},"recoveryType":"recovery-full"}],"ejectNodes":[]}}
+2022-09-07T14:32:14.021Z INFO (Rebalance) Starting rebalance {"change": {"id":"4307eb163446517dcbcbb482310263e6","currentTopologyRev":null,"type":"topology-change-rebalance","keepNodes":[{"nodeInfo":{"nodeId":"1678dfae96c38e07dff43c49b9f6967b","priority":1,"opaque":{"grpc_port":9124,"host":"127.0.0.1","http_port":8097}},"recoveryType":"recovery-full"}],"ejectNodes":[]}}
+2022-09-07T14:32:14.022Z INFO (Rebalance) Got old leader {"leader": ""}
+2022-09-07T14:32:14.023Z INFO (Rebalance) Got current nodes {"#nodes": 0}
+2022-09-07T14:32:14.023Z INFO (Rebalance) Setting self as leader
+2022-09-07T14:32:14.024Z INFO (Rebalance) Did the failover nodes will do eject node now {"eject nodes": []}
+2022-09-07T14:32:14.024Z DEBUG (Leader Manager) Received store event {"eventType": 1}
+2022-09-07T14:32:14.024Z INFO (Leader Manager) Stepped up as leader
+2022-09-07T14:32:14.024Z INFO (Leader Manager) Leader value changed {"leader": true}
+2022-09-07T14:32:14.024Z INFO (Janitor) Starting janitor
+2022-09-07T14:32:14.024Z INFO (Rebalance) Adding nodes now {"keep nodes": [{"nodeInfo":{"nodeId":"1678dfae96c38e07dff43c49b9f6967b","priority":1,"opaque":{"grpc_port":9124,"host":"127.0.0.1","http_port":8097}},"recoveryType":"recovery-full"}]}
+2022-09-07T14:32:14.024Z INFO (Rebalance) Keep node {"nodeID": "1678dfae96c38e07dff43c49b9f6967b"}
+2022-09-07T14:32:14.024Z INFO (Stats) Starting periodic stat collection {"period": "5m0s"}
+2022-09-07T14:32:14.024Z INFO (Leader Manager) Constructing schedule from storage
+2022-09-07T14:32:14.024Z INFO (Janitor) Starting time jump checker
+2022-09-07T14:32:14.025Z DEBUG (Rebalance) Added node to MetaKV {"nodeID": "1678dfae96c38e07dff43c49b9f6967b"}
+2022-09-07T14:32:14.026Z DEBUG (Rebalance) Checking if status match {"expected": "node in"}
+2022-09-07T14:32:14.026Z DEBUG (Leader Manager) Received store event {"eventType": 2}
+2022-09-07T14:32:14.026Z INFO (Event Handler) (Topology) Node has been added to the cluster
+2022-09-07T14:32:14.026Z INFO (Leader Manager) Switch status {"nodeStatus": "node in"}
+2022-09-07T14:32:19.031Z DEBUG (Rebalance) Checking for rebalance status match failed {"attempt": 1, "error": "node status is not in", "expected": "node in"}
+2022-09-07T14:32:19.031Z INFO (Rebalance) Nodes added
+2022-09-07T14:32:19.031Z INFO (ClockKeeper) Starting scheduler
+2022-09-07T14:32:19.031Z INFO (Rebalance) Rebalance done {"err": null, "state": {}, "cancelled": false}
+2022-09-07T14:32:19.031Z INFO (Janitor) Storage access check triggered
+2022-09-07T14:32:19.031Z INFO (Janitor) Running storage access check
+2022-09-07T14:32:19.033Z INFO (Janitor) Running storage access check on state active
+2022-09-07T14:32:19.034Z INFO (Janitor) Running storage access check on state archived
+2022-09-07T14:37:14.025Z INFO (Stats) Start repositories data size collection
+2022-09-07T14:37:14.026Z INFO (Stats) Stop repositories data size collection
+2022-09-07T14:42:14.025Z INFO (Stats) Start repositories data size collection
+2022-09-07T14:42:14.027Z INFO (Stats) Stop repositories data size collection
+2022-09-07T14:47:14.025Z INFO (Stats) Start repositories data size collection
+2022-09-07T14:47:14.026Z INFO (Stats) Stop repositories data size collection
+2022-09-07T14:52:14.025Z INFO (Stats) Start repositories data size collection
+2022-09-07T14:52:14.027Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:07:42.900Z INFO (Main) Running node version backup-7.1.1-3175-cf90ef8 with options: -http-port=8097 -grpc-port=9124 -https-port=18097 -cert-path=/opt/couchbase/var/lib/couchbase/config/certs/chain.pem -key-path=/opt/couchbase/var/lib/couchbase/config/certs/pkey.pem -ca-path=/opt/couchbase/var/lib/couchbase/config/certs/ca.pem -ipv4=required -ipv6=optional -cbm=/opt/couchbase/bin/cbbackupmgr -node-uuid=1678dfae96c38e07dff43c49b9f6967b -public-address=127.0.0.1 -admin-port=8091 -log-file=none -log-level=debug -integrated-mode -integrated-mode-host=http://127.0.0.1:8091 -secure-integrated-mode-host=https://127.0.0.1:18091 -integrated-mode-user=@backup -tmp-dir=/opt/couchbase/var/lib/couchbase/tmp -cbauth-host=127.0.0.1:8091
+2022-09-08T12:07:42.901Z INFO (Main) Initialized logger {"log level": "debug"}
+2022-09-08T12:07:42.901Z INFO (Main) Getting credentials
+2022-09-08T12:07:42.945Z DEBUG (Main) File limit info {"curr": 1048576, "max": 1048576, "err": null}
+2022-09-08T12:07:42.951Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:42.960Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:42.960Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:42.967Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:42.967Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.548Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.549Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.595Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.596Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":1024,"uniform_vbuckets":true}
+2022-09-08T12:07:44.596Z INFO (Node) Confirmed cluster uuid {"clusterUUID": "f7a8495a9eb390597cfca9b1032b2584"}
+2022-09-08T12:07:44.664Z INFO (CBAUDIT) audit: created new audit service
+2022-09-08T12:07:44.664Z INFO (Audit) Audit service initialised
+2022-09-08T12:07:44.676Z INFO (Node) Starting GRPC manager
+2022-09-08T12:07:44.677Z INFO (GRPC Manager) Starting GRPC Server {"address": "0.0.0.0:9124"}
+2022-09-08T12:07:44.678Z INFO (GRPC Manager) Starting GRPC Server {"address": "[::]:9124"}
+2022-09-08T12:07:44.682Z INFO (Node) Starting leader manager
+2022-09-08T12:07:44.682Z INFO (Leader Manager) Starting leader manager
+2022-09-08T12:07:44.684Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:8097", "https": false}
+2022-09-08T12:07:44.684Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:8097", "https": false}
+2022-09-08T12:07:44.684Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:18097", "https": true}
+2022-09-08T12:07:44.684Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:18097", "https": true}
+2022-09-08T12:07:44.686Z INFO (Leader Manager) Node was restarted
+2022-09-08T12:07:44.692Z INFO (Leader Manager) Leader value changed {"leader": true}
+2022-09-08T12:07:44.692Z INFO (Leader Manager) Constructing schedule from storage
+2022-09-08T12:07:44.706Z INFO (Leader Manager) Switch status {"nodeStatus": "node in"}
+2022-09-08T12:07:44.706Z INFO (Janitor) Starting janitor
+2022-09-08T12:07:44.706Z INFO (ClockKeeper) Starting scheduler
+2022-09-08T12:07:44.706Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:44.712Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:44.708Z INFO (Node) TLS config refreshed
+2022-09-08T12:07:44.707Z INFO (Janitor) Starting time jump checker
+2022-09-08T12:07:44.715Z INFO (Storage) Starting MetaKV observer
+2022-09-08T12:07:44.716Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:44.717Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:44.717Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.718Z DEBUG (Leader Manager) Received store event {"eventType": 6}
+2022-09-08T12:07:44.718Z DEBUG (Leader Manager) Received store event {"eventType": 1}
+2022-09-08T12:07:44.718Z INFO (Leader Manager) Stepped up as leader
+2022-09-08T12:07:44.718Z INFO (Leader Manager) Leader value changed {"leader": true}
+2022-09-08T12:07:44.718Z INFO (Janitor) Starting janitor
+2022-09-08T12:07:44.718Z INFO (Stats) Starting periodic stat collection {"period": "5m0s"}
+2022-09-08T12:07:44.718Z INFO (Leader Manager) Constructing schedule from storage
+2022-09-08T12:07:44.719Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.719Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.722Z DEBUG (Leader Manager) Received store event {"eventType": 2}
+2022-09-08T12:07:44.742Z WARN (Worker) Stopping task runner with 0 task on queue
+2022-09-08T12:07:44.742Z WARN (Worker) Stopped
+2022-09-08T12:07:44.742Z INFO (HTTP Manager) Shutting down http server {"https": true}
+2022-09-08T12:07:44.743Z INFO (HTTP Manager) Shutting down http server {"https": false}
+2022-09-08T12:07:44.743Z DEBUG (HTTP Manager) HTTP servers shutdown {"time_taken": 0.0001058}
+2022-09-08T12:07:44.743Z INFO (GRPC Manager) Starting GRPC Server {"address": "0.0.0.0:9124"}
+2022-09-08T12:07:44.744Z INFO (GRPC Manager) Starting GRPC Server {"address": "[::]:9124"}
+2022-09-08T12:07:44.745Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:44.747Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:8097", "https": false}
+2022-09-08T12:07:44.748Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:8097", "https": false}
+2022-09-08T12:07:44.748Z INFO (HTTP Manager) HTTP server started on {"address": "0.0.0.0:18097", "https": true}
+2022-09-08T12:07:44.748Z INFO (HTTP Manager) HTTP server started on {"address": "[::]:18097", "https": true}
+2022-09-08T12:07:44.751Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.751Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/nodeServices'
+2022-09-08T12:07:44.751Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:44.752Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":1024,"uniform_vbuckets":true}
+2022-09-08T12:07:44.753Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools'
+2022-09-08T12:07:44.753Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.755Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default'
+2022-09-08T12:07:44.755Z DEBUG (REST) (Attempt 1) (GET) Dispatching request to 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.792Z DEBUG (REST) (Attempt 1) (GET) (200) Received response from 'http://127.0.0.1:8091/pools/default/buckets'
+2022-09-08T12:07:44.793Z INFO (REST) Successfully connected to cluster | {"enterprise":true,"uuid":"f7a8495a9eb390597cfca9b1032b2584","developer_preview":false,"version":{"min_version":"7.1.1","is_mixed_cluster":false},"max_vbuckets":1024,"uniform_vbuckets":true}
+2022-09-08T12:12:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:12:44.724Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:17:44.720Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:17:44.724Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:22:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:22:44.724Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:27:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:27:44.720Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:32:44.720Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:32:44.723Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:37:44.720Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:37:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:42:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:42:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:47:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:47:44.720Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:52:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:52:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T12:57:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T12:57:44.721Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:02:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:02:44.721Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:07:44.707Z INFO (Janitor) Running storage access check
+2022-09-08T13:07:44.708Z INFO (Janitor) Running orphan task detection
+2022-09-08T13:07:44.711Z INFO (Janitor) Running storage access check on state active
+2022-09-08T13:07:44.713Z INFO (Janitor) Running storage access check on state archived
+2022-09-08T13:07:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:07:44.720Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:12:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:12:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:17:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:17:44.721Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:22:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:22:44.721Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:27:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:27:44.721Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:32:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:32:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:37:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:37:44.722Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:46:39.542Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:46:39.751Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:47:09.543Z INFO (Baby Sitter) [revrpc: Got error (EOF) and will retry in 5s]
+2022-09-08T13:47:44.719Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:47:44.720Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:52:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:52:44.719Z INFO (Stats) Stop repositories data size collection
+2022-09-08T13:57:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T13:57:44.719Z INFO (Stats) Stop repositories data size collection
+2022-09-08T14:02:44.718Z INFO (Stats) Start repositories data size collection
+2022-09-08T14:02:44.720Z INFO (Stats) Stop repositories data size collection

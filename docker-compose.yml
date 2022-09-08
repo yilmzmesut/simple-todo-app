@@ -1,0 +1,30 @@
+version: '3'
+services:
+#  couchserver:
+#    image: couchdb
+#    restart: always
+#    ports:
+#      - "5984:5984"
+#    environment:
+#      - COUCHDB_USER=admin
+#      - COUCHDB_PASSWORD=admin
+#    volumes:
+#      - ./dbdata:/opt/couchdb/data
+  couchbase:
+    image: couchbase
+    ports:
+      - 8091-8096:8091-8096
+      - 11210:11210
+    environment:
+      NODE_TYPE: DEFAULT
+      CLUSTER_USERNAME: Administrator
+      CLUSTER_PASSWORD: todoadmin
+      CLUSTER_NAME: My Couchbase Cluster
+      SERVICES: data,index,query,fts
+      CLUSTER_RAMSIZE: 500
+      BUCKET: todo
+      BUCKET_RAMSIZE: 300
+      ENABLE_FLUSH: 1
+      SAMPLE_BUCKETS: beer-sample,travel-sample
+    volumes:
+      - ./couchbase/db:/opt/couchbase/var
