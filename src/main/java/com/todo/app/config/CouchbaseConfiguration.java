@@ -1,9 +1,13 @@
 package com.todo.app.config;
 
+import com.couchbase.client.java.env.ClusterEnvironment;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.couchbase.config.AbstractCouchbaseConfiguration;
 import org.springframework.data.couchbase.repository.config.EnableCouchbaseRepositories;
+
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 @Configuration
 @EnableCouchbaseRepositories
@@ -41,5 +45,14 @@ public class CouchbaseConfiguration extends AbstractCouchbaseConfiguration {
     @Override
     protected boolean autoIndexCreation() {
         return true;
+    }
+
+    @Override
+    protected void configureEnvironment(final ClusterEnvironment.Builder builder) {
+        try {
+            builder.securityConfig().enableTls(true).trustCertificate(Paths.get(ClassLoader.getSystemResource("capella.pem").toURI()));
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 }
