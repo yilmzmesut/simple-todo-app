@@ -54,7 +54,9 @@ public class CouchbaseConfiguration extends AbstractCouchbaseConfiguration {
     protected void configureEnvironment(final ClusterEnvironment.Builder builder) {
         try {
             URL systemResource = ClassLoader.getSystemResource("capella.pem");
+            URL applicationyml = ClassLoader.getSystemResource("application.properties");
             log.error("CAPELLA.PEM -> " + systemResource);
+            log.error("application.properties -> " + applicationyml);
             builder.securityConfig().enableTls(true).trustCertificate(Paths.get(systemResource.toURI()));
         } catch (URISyntaxException e) {
             e.printStackTrace();
