@@ -1,16 +1,7 @@
-version: '3'
+version: '2'
 services:
-#  couchserver:
-#    image: couchdb
-#    restart: always
-#    ports:
-#      - "5984:5984"
-#    environment:
-#      - COUCHDB_USER=admin
-#      - COUCHDB_PASSWORD=admin
-#    volumes:
-#      - ./dbdata:/opt/couchdb/data
-  couchbase:
+  db:
+    container_name: db
     image: couchbase
     ports:
       - 8091-8096:8091-8096
@@ -28,3 +19,13 @@ services:
       SAMPLE_BUCKETS: beer-sample,travel-sample
     volumes:
       - ./couchbase/db:/opt/couchbase/var
+  todoapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      - TODO_CB_CONNECTIONSTRING=couchbase://db
