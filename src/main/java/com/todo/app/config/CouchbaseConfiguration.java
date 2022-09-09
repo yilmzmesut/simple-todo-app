@@ -49,12 +49,12 @@ public class CouchbaseConfiguration extends AbstractCouchbaseConfiguration {
         return true;
     }
 
-    @Override
+    /*@Override
     protected void configureEnvironment(final ClusterEnvironment.Builder builder) {
         try {
             builder.securityConfig().enableTls(true).trustCertificate(Paths.get(new ClassPathResource("capella.pem").getURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }
