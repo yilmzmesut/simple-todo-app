@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 public class TaskDto {
-    private String id;
+    private Long id;
     private String name;
     private String description;
     private String category;
     private Integer priority;
-    private String userId;
+    private Long userId;
 }
