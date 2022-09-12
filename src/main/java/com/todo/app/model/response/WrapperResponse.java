@@ -1,6 +1,6 @@
 package com.todo.app.model.response;
 
-import com.couchbase.client.core.deps.com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
