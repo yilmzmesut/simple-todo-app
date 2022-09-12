@@ -8,8 +8,6 @@ import org.springframework.data.couchbase.core.mapping.Document;
 import org.springframework.data.couchbase.core.mapping.id.GeneratedValue;
 import org.springframework.data.couchbase.core.mapping.id.GenerationStrategy;
 
-import java.time.LocalDateTime;
-
 @Document
 @Data
 @NoArgsConstructor
@@ -21,7 +19,6 @@ public class Task {
     private String name;
     private String description;
     private String category;
-    private LocalDateTime dueDate;
     private Integer priority;
     private String userId;
 }
