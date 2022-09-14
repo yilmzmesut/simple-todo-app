@@ -21,7 +21,7 @@ public class TaskService {
         return taskRepository.findByUserId(userService.findUsernameFromContext().getId()).map(taskMapper::toDtos).orElse(null);
     }
 
-    public void deleteTask(Long taskId) {
+    public void deleteTask(String taskId) {
         taskRepository.deleteById(taskId);
     }
 
