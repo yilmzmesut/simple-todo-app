@@ -21,7 +21,6 @@ public class Task {
     private String name;
     private String description;
     private String category;
-    private LocalDateTime dueDate;
     private Integer priority;
     private Long userId;
 }
